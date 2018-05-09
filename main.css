@@ -1,0 +1,50 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+
+}
+
+.text-centr{
+    text-align: center;
+}
+
+.jcb{
+
+    justify-content: space-between;
+}
+
+.jca{
+
+    justify-content: space-around;
+}
+
+.flex{
+    display: flex;
+}
+
+.container{
+    width: 85%; margin: 0 auto;
+}
+
+.mt-2{
+    margin-top: 20px;
+}
+
+.p-5{
+    padding: 5px;
+}
+
+.quotes li{
+    border: 1px solid;
+}

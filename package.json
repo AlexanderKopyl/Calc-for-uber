@@ -1,0 +1,24 @@
+{
+  "name": "calc-for-uber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel src -d dist --preset es2015 -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mausina/Calc-for-uber.git"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.6.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mausina/Calc-for-uber/issues"
+  },
+  "homepage": "https://github.com/Mausina/Calc-for-uber#readme"
+}
