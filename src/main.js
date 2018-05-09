@@ -11,8 +11,9 @@ window.addEventListener("load", function () {
             res.forEach(function (user) {
                 quotes.innerHTML +=
                     `    <li class="flex jcb p-5 mt-2">
+                                 <span>N ${user.id} </span>
                                  <p>${user.content}</p> 
-                                  <button class="del" data-id="${user.id}">del</button> 
+                                  <button class="del" data-id="${user.id}">delete</button> 
                              </li>
                             
                         `

@@ -13,7 +13,7 @@ window.addEventListener("load", function () {
         }).then(function (data) {
             var res = data.quotes;
             res.forEach(function (user) {
-                quotes.innerHTML += "    <li class=\"flex jcb p-5 mt-2\">\n                                 <p>" + user.content + "</p> \n                                  <button class=\"del\" data-id=\"" + user.id + "\">del</button> \n                             </li>\n                            \n                        ";
+                quotes.innerHTML += "    <li class=\"flex jcb p-5 mt-2\">\n                                 <span>N " + user.id + " </span>\n                                 <p>" + user.content + "</p> \n                                  <button class=\"del\" data-id=\"" + user.id + "\">delete</button> \n                             </li>\n                            \n                        ";
             });
         });
     }
