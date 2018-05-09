@@ -5,6 +5,7 @@ window.addEventListener("load", function () {
     var content = document.querySelector("#content");
     var quotes = document.querySelector(".output .quotes");
 
+    //загрузить заметки она же обновляет при удалении и при добавлении
     function getQuotes() {
         quotes.innerHTML = "";
         fetch("https://limitless-citadel-88557.herokuapp.com/api/quotes").then(function (res) {
@@ -17,8 +18,10 @@ window.addEventListener("load", function () {
         });
     }
 
+    //взять все заметки при загрузки
     getQuotes();
 
+    //добавление
     form.addEventListener("submit", function (e) {
         e.preventDefault();
         console.log(content.value);
@@ -37,5 +40,26 @@ window.addEventListener("load", function () {
         }).catch(function (res) {
             console.log(res);
         });
+    });
+
+    //удаление
+
+    quotes.addEventListener("click", function (e) {
+        if (e.target.matches(".del")) {
+            fetch("https://limitless-citadel-88557.herokuapp.com/api/quote/" + e.target.dataset.id, {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                method: "DELETE"
+
+            }).then(function (res) {
+                console.log(res);
+                alert("Quote   deleted!!!");
+                getQuotes();
+            }).catch(function (res) {
+                console.log(res);
+            });
+        }
     });
 });
